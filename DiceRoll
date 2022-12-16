@@ -1,0 +1,27 @@
+#pragma once
+#include "SFML/Graphics.hpp"
+//#include <Windows.h>
+using namespace sf;
+
+class DiceRoll
+{
+public:
+    DiceRoll(float width,float height);
+    void draw(RenderWindow& window);
+private:
+    float width;
+    float height;
+    int number;
+    int isUp;
+    int frame;
+    int dx;
+    int dy;
+    int col;
+    int row;
+    int result;
+    char num[6] = { '1','2','3','4','5','6' };
+    Texture spritesheet;
+    Sprite dice;
+    Font font;                
+    Text choise[6];
+};
